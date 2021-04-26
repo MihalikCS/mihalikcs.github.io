@@ -3,8 +3,10 @@
 ### Milestone One: Code Reviews
 
 ### Milestone Two: Software Engineering & Design
-[ test] (7_1_FINAL.docx)
 
 ### Milestone Three: Data Structures & Algorithms
 
 ### Milestone Four: Databases
+
+* [Referenced Material](7-1_FINAL.docx)
+
