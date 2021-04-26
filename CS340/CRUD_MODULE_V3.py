@@ -26,7 +26,7 @@ class DataBaseObjectLayer(object):
 # Create method to implement the R in CRUD.
     def read(self, searchData, collection):
         if searchData:
-            data = self.database.animals.find(searchData, {"_id": False})
+            data = self.database[collection].find(searchData, {"_id": False})
         else:
             data = self.database[collection].find( {}, {"_id": False})
         # Return the dataset else let the error flow up
@@ -50,22 +50,37 @@ class DataBaseObjectLayer(object):
         # Return the dataset else let the error flow up
         return result.raw_result
 
+# JOINS
+
+# Create method to join tables together.
+    def join(self, collection1, localField, collection2, foreignField, alias):
+        result = self.database[collection1].aggregate([
+                    {
+                        "$lookup":
+                        {
+                            "from": "%s" % collection2 ,
+                            "localField": "%s" % localField,
+                            "foreignField": "%s" % foreignField,
+                            "as": "%s" % alias
+                        }
+                    }
+                ])
+        # Return the dataset else let the error flow up
+        return result
+
 # INDEX CREATION/DELETION
 
 # Create index
-    def createIndex(self, deleteData, collection):
-        if deleteData is not None:
-            result = self.database[collection].delete_many(deleteData)
+    def createIndex(self, keys, options, collection):
+        if options:
+            result = self.database[collection].create_index(keys, options)
         else:
-            return "{}"
+            result = self.database[collection].create_index(keys)
         # Return the dataset else let the error flow up
-        return result.raw_result
+        return result
 
 # delete index
-    def deleteIndex(self, deleteData, collection):
-        if deleteData is not None:
-            result = self.database[collection].delete_many(deleteData)
-        else:
-            return "{}"
+    def dropIndex(self, keys, collection):
+        result = self.database[collection].drop_index(keys)
         # Return the dataset else let the error flow up
-        return result.raw_result
+        return result
