@@ -19,6 +19,12 @@ My personal self-assessment of my educational career and my job ambissions:
 
 ### Milestone One: Code Reviews
 
+* https://youtu.be/AgvmuQ29d60
+* https://youtu.be/fVk2PHDsjP8
+* https://youtu.be/PAQyF69He7M
+* https://youtu.be/mSgBu0ICZhk
+
+
 ### Milestone Two: Software Engineering & Design
 
 ### Milestone Three: Data Structures & Algorithms
