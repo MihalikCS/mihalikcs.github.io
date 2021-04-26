@@ -1,4 +1,9 @@
-## Welcome to Michael Mihalik's ePortfolio
+# Welcome to Michael Mihalik's ePortfolio
+
+## About Me
+test test test
+
+>
 
 ### Milestone One: Code Reviews
 
