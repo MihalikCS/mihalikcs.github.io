@@ -1,7 +1,7 @@
 # Welcome to Michael Mihalik's ePortfolio
 
 ## About Me
-test test test
+My personal self-assessment of my educational career and my job ambissions:
 
 > As an older college student who tried conventional schooling at a big public university, this time in my educational career is bittersweet. While my tenure here at SNHU has been tumultuous with the normal balancing my education, family life and career, it is extremely emotional for me to finally cross the finish line and achieve my goals. The computer science program here at SNHU has amplified my strengths in ways I could never imagine and has affected my skills such as collaborating in a team environment, communication, data structures and algorithms, software engineering and database and finally security.
 
